@@ -7,7 +7,10 @@ brokenFirstItem(fruits)  // Works!
 fruits = []
 // Uncomment the next line to see the problem.
 // You will get an "index out of range" error.
+
+
 //brokenFirstItem(fruits)  // Breaks :-(
+// - yeap, totally!
 
 
 
@@ -38,13 +41,16 @@ if let fruit = firstItem(fruits) {
 
 
 func produceFullName(withFirstName firstName: String, middleName: String?, lastName: String) -> String {
+    
     var name = firstName
+    
     if let middleName = middleName {
-        name = "\(name) \(middleName)"
-    }
-    name = "\(name) \(lastName)"
+        name = "\(firstName) \(middleName)"
+    } else {
+    name = "\(firstName) \(lastName)"}
     return name
 }
+
 
 produceFullName(withFirstName: "Jon", middleName: "Bon", lastName: "Jovi")
 produceFullName(withFirstName: "Mary", middleName: nil, lastName: "Doe")
